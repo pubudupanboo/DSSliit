@@ -1,0 +1,19 @@
+server:
+  port: 8020
+  
+spring:
+  application:
+    name: API-GATE-WAY
+
+
+zuul:
+  prefix: /api
+  routes:
+    users:
+      path: /Client1/**
+      serviceId: CLIENT1ST
+    users2:
+      path: /Client2C/**
+      serviceId: CLIENT2C
+
+ 
